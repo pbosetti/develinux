@@ -8,13 +8,13 @@ COPY ./* /root/
 
 WORKDIR /root
 
-RUN apk add cmake clang make git zsh curl wget
+RUN apk add --no-cache --update cmake clang make git zsh curl wget
 
-RUN apk add zeromq-dev hdf5-dev gsl-dev lapack-dev
+RUN apk add --no-cache --update zeromq-dev hdf5-dev gsl-dev lapack-dev
 
-RUN apk add ruby lua5.3-dev
+RUN apk add --no-cache --update ruby lua5.3-dev
 
-# RUN gem install gv_fsm
+# RUN sudo gem install gv_fsm
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
