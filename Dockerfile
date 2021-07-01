@@ -12,8 +12,11 @@ RUN adduser -S user -G wheel
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
-COPY ./* /home/user/
-WORKDIR /home/user
+RUN mkdir -p /work
+COPY ./* /work/
+WORKDIR /work
+RUN chmod a+rwx -R /work
+RUN chmod a+rwx -R /root
 
 # RUN sudo gem install gv_fsm
 
@@ -21,4 +24,4 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 
 CMD ["/bin/zsh"]
 
-LABEL Name=develinux Version=0.0.1
+LABEL Name=develinux Version=0.0.2
