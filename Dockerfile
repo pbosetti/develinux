@@ -2,7 +2,7 @@ FROM alpine:latest
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
-COPY ./* /root
+COPY ./* /root/
 
 WORKDIR /root
 
