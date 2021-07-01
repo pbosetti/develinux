@@ -15,7 +15,7 @@ RUN adduser -S user -G wheel
 COPY ./* /home/user/
 WORKDIR /home/user
 
-RUN sudo gem install gv_fsm
+# RUN sudo gem install gv_fsm
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
