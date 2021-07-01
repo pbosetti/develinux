@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+USER root
+
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
 COPY ./* /root/
