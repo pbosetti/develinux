@@ -14,7 +14,7 @@ RUN apk add zeromq-dev hdf5-dev gsl-dev lapack-dev
 
 RUN apk add ruby lua5.3-dev
 
-RUN gem install gv_fsm
+# RUN gem install gv_fsm
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
