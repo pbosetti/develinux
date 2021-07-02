@@ -22,6 +22,8 @@ RUN chmod a+rwx -R /root
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+SHELL ["/bin/zsh", "-c"]
+
 CMD ["/bin/zsh"]
 
 LABEL Name=develinux Version=0.0.2
