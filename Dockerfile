@@ -22,7 +22,7 @@ RUN chmod a+rwx -R /root
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-SHELL ["/bin/zsh", "-c"]
+SHELL ["/bin/zsh"]
 
 CMD ["/bin/zsh"]
 
