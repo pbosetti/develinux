@@ -2,9 +2,9 @@ FROM alpine:latest
 
 USER root
 
-RUN apk add --no-cache --update cmake clang make git zsh curl wget sudo
+RUN apk add --no-cache --update cmake gcc g++ make git zsh curl wget sudo
 
-RUN apk add --no-cache --update zeromq-dev hdf5-dev gsl-dev lapack-dev
+RUN apk add --no-cache --update zeromq-dev hdf5-dev gsl-dev lapack-dev musl-dev binutils libc-dev gdb
 
 RUN apk add --no-cache --update ruby lua5.3-dev
 
